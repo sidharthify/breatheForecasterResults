@@ -4,7 +4,7 @@ Seven day PM2.5 and PM10 forecasts for Jammu, published before the days happen a
 
 > **This is an experiment.** It is not wired into the Breathe site or the apps, and nobody should plan around it yet. It is here so that the model can be watched in public for a while before anyone decides whether it is worth shipping.
 
-Last run **2026-08-25 17:38 IST**. Zone `jammu_city`. Index is the **US EPA AQI**. Model and method: [breatheForecaster](https://github.com/sidharthify/breatheForecaster).
+Last run **2026-08-25 17:42 IST**. Zone `jammu_city`. Index is the **US EPA AQI**. Model and method: [breatheForecaster](https://github.com/sidharthify/breatheForecaster).
 
 ## Next seven days
 
@@ -39,6 +39,18 @@ Across all lead times the 80% range contained the truth **100%** of the time on 
 ## Forecast log
 
 One block per night. Actual values appear as each day finishes, so the newest block is empty and the oldest is complete.
+
+### Issued 2026-08-25
+
+| Day | Lead | Forecast PM2.5 | 80% range | Forecast AQI | Actual PM2.5 | Actual AQI | Miss | In range |
+|---|---|---:|---|---:|---:|---:|---:|---|
+| Tue 25 Aug | d+1 | 36.9 | 26.1 to 52.2 | 104 | pending | pending | n/a | n/a |
+| Wed 26 Aug | d+2 | 37.4 | 25.0 to 56.2 | 106 | pending | pending | n/a | n/a |
+| Thu 27 Aug | d+3 | 37.8 | 25.1 to 56.8 | 107 | pending | pending | n/a | n/a |
+| Fri 28 Aug | d+4 | 38.0 | 25.2 to 57.2 | 107 | pending | pending | n/a | n/a |
+| Sat 29 Aug | d+5 | 38.1 | 25.3 to 57.3 | 107 | pending | pending | n/a | n/a |
+| Sun 30 Aug | d+6 | 38.1 | 25.5 to 57.1 | 107 | pending | pending | n/a | n/a |
+| Mon 31 Aug | d+7 | 38.2 | 25.4 to 57.3 | 108 | pending | pending | n/a | n/a |
 
 ### Issued 2026-08-19
 
