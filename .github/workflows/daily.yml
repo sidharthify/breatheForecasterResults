@@ -1,0 +1,59 @@
+name: daily forecast
+
+# 19:00 UTC is 00:30 IST, half an hour into the new Indian day. That timing is
+# deliberate: the forecaster refuses to use a day that is still in progress, so
+# running just after midnight means yesterday is complete and the seven days it
+# forecasts are all genuinely in the future.
+on:
+  schedule:
+    - cron: "0 19 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: daily-forecast
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  forecast:
+    runs-on: ubuntu-latest
+    env:
+      ZONE: jammu_city
+      # The forecaster keeps its journal under $XDG_DATA_HOME/breathe-forecaster.
+      # Pointing that at the repo is what makes the record survive between runs.
+      XDG_DATA_HOME: ${{ github.workspace }}/journal
+
+    steps:
+      - name: Check out this log
+        uses: actions/checkout@v4
+
+      - name: Check out the forecaster
+        uses: actions/checkout@v4
+        with:
+          repository: sidharthify/breatheForecaster
+          path: tool
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Record tonight's forecast
+        run: python tool/forecaster.py record "$ZONE"
+
+      - name: Regenerate the log
+        run: python tool/forecaster.py report "$ZONE" > README.md
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md journal
+          if git diff --staged --quiet; then
+            echo "nothing changed"
+            exit 0
+          fi
+          git commit -m "log: forecast for $(date -u -d '+5 hours 30 minutes' +%Y-%m-%d)"
+          git push
