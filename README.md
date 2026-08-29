@@ -4,21 +4,21 @@ Seven day PM2.5 and PM10 forecasts for Jammu, published before the days happen a
 
 > **This is an experiment.** It is not wired into the Breathe site or the apps, and nobody should plan around it yet. It is here so that the model can be watched in public for a while before anyone decides whether it is worth shipping.
 
-Last run **2026-08-28 07:52 IST**. Zone `jammu_city`. Index is the **US EPA AQI**. Model and method: [breatheForecaster](https://github.com/sidharthify/breatheForecaster).
+Last run **2026-08-29 07:26 IST**. Zone `jammu_city`. Index is the **US EPA AQI**. Model and method: [breatheForecaster](https://github.com/sidharthify/breatheForecaster).
 
 ## Next seven days
 
-Anchored on 2026-08-27, the last day of sensor data that is actually finished.
+Anchored on 2026-08-28, the last day of sensor data that is actually finished.
 
 | Day | Lead | PM2.5 | 80% range | PM10 | AQI | Category | Weather |
 |---|---|---:|---|---:|---:|---|---|
-| Fri 28 Aug | d+1 | 44.3 | 31.4 to 62.7 | 51.5 | 123 | Unhealthy for Sensitive Groups | thunderstorm, 24 to 32C, 4mm |
-| Sat 29 Aug | d+2 | 42.0 | 28.0 to 63.0 | 48.5 | 117 | Unhealthy for Sensitive Groups | drizzle, 26 to 33C, 1mm |
-| Sun 30 Aug | d+3 | 40.8 | 27.1 to 61.3 | 46.9 | 114 | Unhealthy for Sensitive Groups | thunderstorm, 25 to 33C, 6mm |
-| Mon 31 Aug | d+4 | 40.1 | 26.7 to 60.3 | 46.1 | 112 | Unhealthy for Sensitive Groups | thunderstorm, 24 to 32C, 10mm |
-| Tue 01 Sep | d+5 | 39.7 | 26.4 to 59.8 | 45.7 | 111 | Unhealthy for Sensitive Groups | thunderstorm, 25 to 30C, 8mm |
-| Wed 02 Sep | d+6 | 39.5 | 26.4 to 59.2 | 45.4 | 111 | Unhealthy for Sensitive Groups | drizzle, 24 to 31C, 5mm |
-| Thu 03 Sep | d+7 | 39.4 | 26.2 to 59.1 | 45.3 | 110 | Unhealthy for Sensitive Groups | drizzle, 24 to 30C, 2mm |
+| Sat 29 Aug | d+1 | 42.7 | 30.3 to 60.3 | 50.3 | 119 | Unhealthy for Sensitive Groups | thunderstorm, 26 to 33C, 3mm |
+| Sun 30 Aug | d+2 | 41.5 | 27.7 to 62.1 | 48.4 | 116 | Unhealthy for Sensitive Groups | thunderstorm, 25 to 32C, 8mm |
+| Mon 31 Aug | d+3 | 40.8 | 27.2 to 61.3 | 47.4 | 114 | Unhealthy for Sensitive Groups | thunderstorm, 24 to 32C, 14mm |
+| Tue 01 Sep | d+4 | 40.4 | 26.9 to 60.8 | 46.8 | 113 | Unhealthy for Sensitive Groups | thunderstorm, 24 to 30C, 6mm |
+| Wed 02 Sep | d+5 | 40.2 | 26.8 to 60.5 | 46.5 | 113 | Unhealthy for Sensitive Groups | drizzle, 24 to 31C, 4mm |
+| Thu 03 Sep | d+6 | 40.1 | 26.8 to 60.0 | 46.4 | 112 | Unhealthy for Sensitive Groups | drizzle, 24 to 31C |
+| Fri 04 Sep | d+7 | 40.0 | 26.7 to 60.1 | 46.3 | 112 | Unhealthy for Sensitive Groups | drizzle, 23 to 30C, 2mm |
 
 Concentrations are daily means in micrograms per cubic metre. The range is an 80% interval measured from this zone's own past errors, not from theory. Past about day three the forecast is essentially the 14 day seasonal level, which is the model being honest rather than the model giving up.
 
@@ -28,25 +28,37 @@ Every forecast this log has published, graded once its day finished. Nothing her
 
 | Lead | Days scored | Typical miss | Mean miss | Bias | Inside 80% range | Category exact | Within one band |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| d+1 | 4 | 22% | 18% | -18% | 100% | 50% | 100% |
-| d+2 | 3 | 19% | 23% | -23% | 100% | 33% | 100% |
-| d+3 | 2 | 21% | 21% | -21% | 100% | 50% | 100% |
-| d+4 | 1 | 23% | 23% | +23% | 100% | 0% | 100% |
+| d+1 | 5 | 21% | 14% | -14% | 100% | 60% | 100% |
+| d+2 | 4 | 17% | 18% | -18% | 100% | 50% | 100% |
+| d+3 | 3 | 19% | 18% | -18% | 100% | 67% | 100% |
+| d+4 | 2 | 19% | 19% | +4% | 100% | 50% | 100% |
 | d+5 | 1 | 1% | 1% | +1% | 100% | 100% | 100% |
 | d+6 | 1 | 22% | 22% | -22% | 100% | 100% | 100% |
 | d+7 | 1 | 34% | 34% | -34% | 0% | 0% | 100% |
 
-Across all lead times the 80% range contained the truth **92%** of the time on **13** scored days. A range that says 80% should land near 80%: much less and it is overconfident, much more and it is wider than it needs to be. Bias is the direction of the miss, so a positive number means the forecast ran high.
+Across all lead times the 80% range contained the truth **94%** of the time on **17** scored days. A range that says 80% should land near 80%: much less and it is overconfident, much more and it is wider than it needs to be. Bias is the direction of the miss, so a positive number means the forecast ran high.
 
 ## Forecast log
 
 One block per night. Actual values appear as each day finishes, so the newest block is empty and the oldest is complete.
 
+### Issued 2026-08-29
+
+| Day | Lead | Forecast PM2.5 | 80% range | Forecast AQI | Actual PM2.5 | Actual AQI | Miss | In range |
+|---|---|---:|---|---:|---:|---:|---:|---|
+| Sat 29 Aug | d+1 | 42.7 | 30.3 to 60.3 | 119 | pending | pending | n/a | n/a |
+| Sun 30 Aug | d+2 | 41.5 | 27.7 to 62.1 | 116 | pending | pending | n/a | n/a |
+| Mon 31 Aug | d+3 | 40.8 | 27.2 to 61.3 | 114 | pending | pending | n/a | n/a |
+| Tue 01 Sep | d+4 | 40.4 | 26.9 to 60.8 | 113 | pending | pending | n/a | n/a |
+| Wed 02 Sep | d+5 | 40.2 | 26.8 to 60.5 | 113 | pending | pending | n/a | n/a |
+| Thu 03 Sep | d+6 | 40.1 | 26.8 to 60.0 | 112 | pending | pending | n/a | n/a |
+| Fri 04 Sep | d+7 | 40.0 | 26.7 to 60.1 | 112 | pending | pending | n/a | n/a |
+
 ### Issued 2026-08-28
 
 | Day | Lead | Forecast PM2.5 | 80% range | Forecast AQI | Actual PM2.5 | Actual AQI | Miss | In range |
 |---|---|---:|---|---:|---:|---:|---:|---|
-| Fri 28 Aug | d+1 | 44.3 | 31.4 to 62.7 | 123 | pending | pending | n/a | n/a |
+| Fri 28 Aug | d+1 | 44.3 | 31.4 to 62.7 | 123 | 45.0 | 124 | -2% | yes |
 | Sat 29 Aug | d+2 | 42.0 | 28.0 to 63.0 | 117 | pending | pending | n/a | n/a |
 | Sun 30 Aug | d+3 | 40.8 | 27.1 to 61.3 | 114 | pending | pending | n/a | n/a |
 | Mon 31 Aug | d+4 | 40.1 | 26.7 to 60.3 | 112 | pending | pending | n/a | n/a |
@@ -59,7 +71,7 @@ One block per night. Actual values appear as each day finishes, so the newest bl
 | Day | Lead | Forecast PM2.5 | 80% range | Forecast AQI | Actual PM2.5 | Actual AQI | Miss | In range |
 |---|---|---:|---|---:|---:|---:|---:|---|
 | Thu 27 Aug | d+1 | 47.8 | 33.8 to 67.6 | 131 | 48.8 | 134 | -2% | yes |
-| Fri 28 Aug | d+2 | 43.8 | 29.2 to 65.7 | 121 | pending | pending | n/a | n/a |
+| Fri 28 Aug | d+2 | 43.8 | 29.2 to 65.7 | 121 | 45.0 | 124 | -3% | yes |
 | Sat 29 Aug | d+3 | 41.7 | 27.7 to 62.7 | 116 | pending | pending | n/a | n/a |
 | Sun 30 Aug | d+4 | 40.6 | 27.0 to 61.0 | 114 | pending | pending | n/a | n/a |
 | Mon 31 Aug | d+5 | 39.9 | 26.5 to 60.1 | 112 | pending | pending | n/a | n/a |
@@ -72,7 +84,7 @@ One block per night. Actual values appear as each day finishes, so the newest bl
 |---|---|---:|---|---:|---:|---:|---:|---|
 | Wed 26 Aug | d+1 | 43.0 | 30.4 to 60.8 | 119 | 55.7 | 151 | -23% | yes |
 | Thu 27 Aug | d+2 | 41.0 | 27.3 to 61.5 | 115 | 48.8 | 134 | -16% | yes |
-| Fri 28 Aug | d+3 | 39.9 | 26.6 to 60.0 | 112 | pending | pending | n/a | n/a |
+| Fri 28 Aug | d+3 | 39.9 | 26.6 to 60.0 | 112 | 45.0 | 124 | -11% | yes |
 | Sat 29 Aug | d+4 | 39.3 | 26.2 to 59.2 | 110 | pending | pending | n/a | n/a |
 | Sun 30 Aug | d+5 | 39.0 | 25.9 to 58.7 | 110 | pending | pending | n/a | n/a |
 | Mon 31 Aug | d+6 | 38.8 | 25.9 to 58.1 | 109 | pending | pending | n/a | n/a |
@@ -85,7 +97,7 @@ One block per night. Actual values appear as each day finishes, so the newest bl
 | Tue 25 Aug | d+1 | 36.9 | 26.1 to 52.2 | 104 | 46.8 | 129 | -21% | yes |
 | Wed 26 Aug | d+2 | 37.4 | 25.0 to 56.2 | 106 | 55.7 | 151 | -33% | yes |
 | Thu 27 Aug | d+3 | 37.8 | 25.1 to 56.8 | 107 | 48.8 | 134 | -22% | yes |
-| Fri 28 Aug | d+4 | 38.0 | 25.2 to 57.2 | 107 | pending | pending | n/a | n/a |
+| Fri 28 Aug | d+4 | 38.0 | 25.2 to 57.2 | 107 | 45.0 | 124 | -16% | yes |
 | Sat 29 Aug | d+5 | 38.1 | 25.3 to 57.3 | 107 | pending | pending | n/a | n/a |
 | Sun 30 Aug | d+6 | 38.1 | 25.5 to 57.1 | 107 | pending | pending | n/a | n/a |
 | Mon 31 Aug | d+7 | 38.2 | 25.4 to 57.3 | 108 | pending | pending | n/a | n/a |
