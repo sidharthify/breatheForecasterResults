@@ -4,21 +4,21 @@ Seven day PM2.5 and PM10 forecasts for Jammu, published before the days happen a
 
 > **This is an experiment.** It is not wired into the Breathe site or the apps, and nobody should plan around it yet. It is here so that the model can be watched in public for a while before anyone decides whether it is worth shipping.
 
-Last run **2026-09-10 02:49 IST**. Zone `jammu_city`. Index is the **US EPA AQI**. Model and method: [breatheForecaster](https://github.com/sidharthify/breatheForecaster).
+Last run **2026-09-11 02:45 IST**. Zone `jammu_city`. Index is the **US EPA AQI**. Model and method: [breatheForecaster](https://github.com/sidharthify/breatheForecaster).
 
 ## Next seven days
 
-Anchored on 2026-09-09, the last day of sensor data that is actually finished.
+Anchored on 2026-09-10, the last day of sensor data that is actually finished.
 
 | Day | Lead | PM2.5 | 80% range | PM10 | AQI | Category | Weather |
 |---|---|---:|---|---:|---:|---|---|
-| Thu 10 Sep | d+1 | 57.3 | 41.0 to 80.0 | 65.2 | 152 | Unhealthy | clear, 25 to 33C |
-| Fri 11 Sep | d+2 | 52.4 | 35.4 to 77.6 | 60.4 | 143 | Unhealthy for Sensitive Groups | drizzle, 25 to 33C |
-| Sat 12 Sep | d+3 | 49.9 | 33.6 to 74.1 | 58.0 | 136 | Unhealthy for Sensitive Groups | thunderstorm, 24 to 31C, 2mm |
-| Sun 13 Sep | d+4 | 48.5 | 32.6 to 72.1 | 56.7 | 133 | Unhealthy for Sensitive Groups | drizzle, 24 to 32C |
-| Mon 14 Sep | d+5 | 47.7 | 32.1 to 71.0 | 56.0 | 131 | Unhealthy for Sensitive Groups | drizzle, 25 to 32C |
-| Tue 15 Sep | d+6 | 47.3 | 31.9 to 70.1 | 55.6 | 130 | Unhealthy for Sensitive Groups | thunderstorm, 24 to 29C, 2mm |
-| Wed 16 Sep | d+7 | 47.0 | 31.6 to 69.9 | 55.4 | 129 | Unhealthy for Sensitive Groups | thunderstorm, 23 to 28C, 2mm |
+| Fri 11 Sep | d+1 | 48.5 | 34.7 to 67.7 | 57.7 | 133 | Unhealthy for Sensitive Groups | drizzle, 25 to 33C |
+| Sat 12 Sep | d+2 | 47.8 | 32.3 to 70.6 | 56.6 | 131 | Unhealthy for Sensitive Groups | thunderstorm, 24 to 32C, 2mm |
+| Sun 13 Sep | d+3 | 47.3 | 31.9 to 70.2 | 56.0 | 130 | Unhealthy for Sensitive Groups | thunderstorm, 23 to 31C, 3mm |
+| Mon 14 Sep | d+4 | 47.1 | 31.7 to 70.0 | 55.7 | 130 | Unhealthy for Sensitive Groups | thunderstorm, 24 to 31C, 2mm |
+| Tue 15 Sep | d+5 | 47.0 | 31.6 to 69.8 | 55.5 | 129 | Unhealthy for Sensitive Groups | drizzle, 24 to 30C, 2mm |
+| Wed 16 Sep | d+6 | 46.9 | 31.7 to 69.5 | 55.4 | 129 | Unhealthy for Sensitive Groups | thunderstorm, 22 to 29C, 8mm |
+| Thu 17 Sep | d+7 | 46.9 | 31.5 to 69.6 | 55.4 | 129 | Unhealthy for Sensitive Groups | drizzle, 21 to 28C, 4mm |
 
 Concentrations are daily means in micrograms per cubic metre. The range is an 80% interval measured from this zone's own past errors, not from theory. Past about day three the forecast is essentially the 14 day seasonal level, which is the model being honest rather than the model giving up.
 
@@ -28,25 +28,37 @@ Every forecast this log has published, graded once its day finished. Nothing her
 
 | Lead | Days scored | Typical miss | Mean miss | Bias | Inside 80% range | Category exact | Within one band |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| d+1 | 17 | 6% | 10% | -8% | 100% | 76% | 100% |
-| d+2 | 16 | 7% | 12% | -10% | 94% | 75% | 100% |
-| d+3 | 15 | 10% | 12% | -11% | 100% | 80% | 100% |
-| d+4 | 14 | 11% | 13% | -9% | 93% | 79% | 100% |
-| d+5 | 13 | 9% | 12% | -11% | 92% | 85% | 100% |
-| d+6 | 12 | 12% | 15% | -14% | 92% | 83% | 100% |
-| d+7 | 11 | 12% | 17% | -16% | 82% | 73% | 100% |
+| d+1 | 18 | 8% | 11% | -7% | 100% | 72% | 100% |
+| d+2 | 17 | 7% | 11% | -10% | 94% | 76% | 100% |
+| d+3 | 16 | 10% | 12% | -11% | 100% | 81% | 100% |
+| d+4 | 15 | 10% | 13% | -9% | 93% | 80% | 100% |
+| d+5 | 14 | 11% | 13% | -11% | 93% | 86% | 100% |
+| d+6 | 13 | 12% | 15% | -14% | 92% | 85% | 100% |
+| d+7 | 12 | 13% | 17% | -16% | 83% | 75% | 100% |
 
-Across all lead times the 80% range contained the truth **94%** of the time on **98** scored days. A range that says 80% should land near 80%: much less and it is overconfident, much more and it is wider than it needs to be. Bias is the direction of the miss, so a positive number means the forecast ran high.
+Across all lead times the 80% range contained the truth **94%** of the time on **105** scored days. A range that says 80% should land near 80%: much less and it is overconfident, much more and it is wider than it needs to be. Bias is the direction of the miss, so a positive number means the forecast ran high.
 
 ## Forecast log
 
 One block per night. Actual values appear as each day finishes, so the newest block is empty and the oldest is complete.
 
+### Issued 2026-09-11
+
+| Day | Lead | Forecast PM2.5 | 80% range | Forecast AQI | Actual PM2.5 | Actual AQI | Miss | In range |
+|---|---|---:|---|---:|---:|---:|---:|---|
+| Fri 11 Sep | d+1 | 48.5 | 34.7 to 67.7 | 133 | pending | pending | n/a | n/a |
+| Sat 12 Sep | d+2 | 47.8 | 32.3 to 70.6 | 131 | pending | pending | n/a | n/a |
+| Sun 13 Sep | d+3 | 47.3 | 31.9 to 70.2 | 130 | pending | pending | n/a | n/a |
+| Mon 14 Sep | d+4 | 47.1 | 31.7 to 70.0 | 130 | pending | pending | n/a | n/a |
+| Tue 15 Sep | d+5 | 47.0 | 31.6 to 69.8 | 129 | pending | pending | n/a | n/a |
+| Wed 16 Sep | d+6 | 46.9 | 31.7 to 69.5 | 129 | pending | pending | n/a | n/a |
+| Thu 17 Sep | d+7 | 46.9 | 31.5 to 69.6 | 129 | pending | pending | n/a | n/a |
+
 ### Issued 2026-09-10
 
 | Day | Lead | Forecast PM2.5 | 80% range | Forecast AQI | Actual PM2.5 | Actual AQI | Miss | In range |
 |---|---|---:|---|---:|---:|---:|---:|---|
-| Thu 10 Sep | d+1 | 57.3 | 41.0 to 80.0 | 152 | pending | pending | n/a | n/a |
+| Thu 10 Sep | d+1 | 57.3 | 41.0 to 80.0 | 152 | 49.8 | 136 | +15% | yes |
 | Fri 11 Sep | d+2 | 52.4 | 35.4 to 77.6 | 143 | pending | pending | n/a | n/a |
 | Sat 12 Sep | d+3 | 49.9 | 33.6 to 74.1 | 136 | pending | pending | n/a | n/a |
 | Sun 13 Sep | d+4 | 48.5 | 32.6 to 72.1 | 133 | pending | pending | n/a | n/a |
@@ -59,7 +71,7 @@ One block per night. Actual values appear as each day finishes, so the newest bl
 | Day | Lead | Forecast PM2.5 | 80% range | Forecast AQI | Actual PM2.5 | Actual AQI | Miss | In range |
 |---|---|---:|---|---:|---:|---:|---:|---|
 | Wed 09 Sep | d+1 | 52.6 | 37.6 to 73.5 | 143 | 66.9 | 159 | -21% | yes |
-| Thu 10 Sep | d+2 | 49.6 | 33.5 to 73.5 | 136 | pending | pending | n/a | n/a |
+| Thu 10 Sep | d+2 | 49.6 | 33.5 to 73.5 | 136 | 49.8 | 136 | -0% | yes |
 | Fri 11 Sep | d+3 | 48.1 | 32.4 to 71.4 | 132 | pending | pending | n/a | n/a |
 | Sat 12 Sep | d+4 | 47.2 | 31.8 to 70.1 | 130 | pending | pending | n/a | n/a |
 | Sun 13 Sep | d+5 | 46.7 | 31.4 to 69.5 | 129 | pending | pending | n/a | n/a |
@@ -72,7 +84,7 @@ One block per night. Actual values appear as each day finishes, so the newest bl
 |---|---|---:|---|---:|---:|---:|---:|---|
 | Tue 08 Sep | d+1 | 44.9 | 32.1 to 62.8 | 124 | 58.1 | 153 | -23% | yes |
 | Wed 09 Sep | d+2 | 45.1 | 30.5 to 66.8 | 125 | 66.9 | 159 | -33% | **no** |
-| Thu 10 Sep | d+3 | 45.3 | 30.5 to 67.2 | 125 | pending | pending | n/a | n/a |
+| Thu 10 Sep | d+3 | 45.3 | 30.5 to 67.2 | 125 | 49.8 | 136 | -9% | yes |
 | Fri 11 Sep | d+4 | 45.3 | 30.5 to 67.3 | 125 | pending | pending | n/a | n/a |
 | Sat 12 Sep | d+5 | 45.4 | 30.5 to 67.4 | 125 | pending | pending | n/a | n/a |
 | Sun 13 Sep | d+6 | 45.4 | 30.6 to 67.2 | 125 | pending | pending | n/a | n/a |
@@ -85,7 +97,7 @@ One block per night. Actual values appear as each day finishes, so the newest bl
 | Mon 07 Sep | d+1 | 46.3 | 33.1 to 64.8 | 128 | 44.5 | 123 | +4% | yes |
 | Tue 08 Sep | d+2 | 45.6 | 30.7 to 67.6 | 126 | 58.1 | 153 | -22% | yes |
 | Wed 09 Sep | d+3 | 45.2 | 30.4 to 67.2 | 125 | 66.9 | 159 | -32% | yes |
-| Thu 10 Sep | d+4 | 45.0 | 30.2 to 66.9 | 124 | pending | pending | n/a | n/a |
+| Thu 10 Sep | d+4 | 45.0 | 30.2 to 66.9 | 124 | 49.8 | 136 | -10% | yes |
 | Fri 11 Sep | d+5 | 44.9 | 30.1 to 66.8 | 124 | pending | pending | n/a | n/a |
 | Sat 12 Sep | d+6 | 44.8 | 30.2 to 66.4 | 124 | pending | pending | n/a | n/a |
 | Sun 13 Sep | d+7 | 44.8 | 30.1 to 66.5 | 124 | pending | pending | n/a | n/a |
@@ -98,7 +110,7 @@ One block per night. Actual values appear as each day finishes, so the newest bl
 | Mon 07 Sep | d+2 | 43.9 | 29.6 to 65.2 | 122 | 44.5 | 123 | -1% | yes |
 | Tue 08 Sep | d+3 | 43.6 | 29.3 to 64.9 | 121 | 58.1 | 153 | -25% | yes |
 | Wed 09 Sep | d+4 | 43.4 | 29.2 to 64.6 | 120 | 66.9 | 159 | -35% | **no** |
-| Thu 10 Sep | d+5 | 43.3 | 29.1 to 64.5 | 120 | pending | pending | n/a | n/a |
+| Thu 10 Sep | d+5 | 43.3 | 29.1 to 64.5 | 120 | 49.8 | 136 | -13% | yes |
 | Fri 11 Sep | d+6 | 43.2 | 29.1 to 64.2 | 120 | pending | pending | n/a | n/a |
 | Sat 12 Sep | d+7 | 43.2 | 29.0 to 64.3 | 120 | pending | pending | n/a | n/a |
 
@@ -111,7 +123,7 @@ One block per night. Actual values appear as each day finishes, so the newest bl
 | Mon 07 Sep | d+3 | 44.1 | 29.6 to 65.7 | 122 | 44.5 | 123 | -1% | yes |
 | Tue 08 Sep | d+4 | 43.6 | 29.3 to 65.0 | 121 | 58.1 | 153 | -25% | yes |
 | Wed 09 Sep | d+5 | 43.4 | 29.1 to 64.7 | 120 | 66.9 | 159 | -35% | **no** |
-| Thu 10 Sep | d+6 | 43.2 | 29.1 to 64.2 | 120 | pending | pending | n/a | n/a |
+| Thu 10 Sep | d+6 | 43.2 | 29.1 to 64.2 | 120 | 49.8 | 136 | -13% | yes |
 | Fri 11 Sep | d+7 | 43.1 | 29.0 to 64.2 | 120 | pending | pending | n/a | n/a |
 
 ### Issued 2026-09-04
@@ -124,7 +136,7 @@ One block per night. Actual values appear as each day finishes, so the newest bl
 | Mon 07 Sep | d+4 | 42.7 | 28.6 to 63.7 | 119 | 44.5 | 123 | -4% | yes |
 | Tue 08 Sep | d+5 | 42.6 | 28.5 to 63.6 | 118 | 58.1 | 153 | -27% | yes |
 | Wed 09 Sep | d+6 | 42.6 | 28.6 to 63.3 | 118 | 66.9 | 159 | -36% | **no** |
-| Thu 10 Sep | d+7 | 42.5 | 28.5 to 63.4 | 118 | pending | pending | n/a | n/a |
+| Thu 10 Sep | d+7 | 42.5 | 28.5 to 63.4 | 118 | 49.8 | 136 | -15% | yes |
 
 ### Issued 2026-09-03
 
@@ -150,19 +162,7 @@ One block per night. Actual values appear as each day finishes, so the newest bl
 | Mon 07 Sep | d+6 | 41.6 | 27.9 to 61.9 | 116 | 44.5 | 123 | -7% | yes |
 | Tue 08 Sep | d+7 | 41.6 | 27.8 to 62.1 | 116 | 58.1 | 153 | -28% | yes |
 
-### Issued 2026-09-01
-
-| Day | Lead | Forecast PM2.5 | 80% range | Forecast AQI | Actual PM2.5 | Actual AQI | Miss | In range |
-|---|---|---:|---|---:|---:|---:|---:|---|
-| Tue 01 Sep | d+1 | 42.4 | 30.1 to 59.7 | 118 | 41.0 | 114 | +3% | yes |
-| Wed 02 Sep | d+2 | 42.0 | 28.2 to 62.7 | 117 | 37.2 | 105 | +13% | yes |
-| Thu 03 Sep | d+3 | 41.8 | 27.9 to 62.5 | 117 | 44.1 | 122 | -5% | yes |
-| Fri 04 Sep | d+4 | 41.7 | 27.8 to 62.4 | 116 | 49.3 | 135 | -15% | yes |
-| Sat 05 Sep | d+5 | 41.6 | 27.8 to 62.3 | 116 | 45.6 | 126 | -9% | yes |
-| Sun 06 Sep | d+6 | 41.6 | 27.9 to 62.0 | 116 | 47.5 | 130 | -12% | yes |
-| Mon 07 Sep | d+7 | 41.5 | 27.8 to 62.1 | 116 | 44.5 | 123 | -7% | yes |
-
-_8 older forecasts are not shown. The full journal is in `journal/` and nothing is ever removed from it._
+_9 older forecasts are not shown. The full journal is in `journal/` and nothing is ever removed from it._
 
 ## What these numbers do and do not show
 
