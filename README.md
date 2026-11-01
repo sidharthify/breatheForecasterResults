@@ -4,21 +4,21 @@ Seven day PM2.5 and PM10 forecasts for Jammu, published before the days happen a
 
 > **This is an experiment.** It is not wired into the Breathe site or the apps, and nobody should plan around it yet. It is here so that the model can be watched in public for a while before anyone decides whether it is worth shipping.
 
-Last run **2026-11-01 03:29 IST**. Zone `jammu_city`. Index is the **US EPA AQI**. Model and method: [breatheForecaster](https://github.com/sidharthify/breatheForecaster).
+Last run **2026-11-02 03:59 IST**. Zone `jammu_city`. Index is the **US EPA AQI**. Model and method: [breatheForecaster](https://github.com/sidharthify/breatheForecaster).
 
 ## Next seven days
 
-Anchored on 2026-10-31, the last day of sensor data that is actually finished.
+Anchored on 2026-11-01, the last day of sensor data that is actually finished.
 
 | Day | Lead | PM2.5 | 80% range | PM10 | AQI | Category | Weather |
 |---|---|---:|---|---:|---:|---|---|
-| Sun 01 Nov | d+1 | 125.7 | 90.6 to 174.3 | 135.0 | 201 | Very Unhealthy | cloudy, 15 to 27C |
-| Mon 02 Nov | d+2 | 103.8 | 70.5 to 152.8 | 112.8 | 185 | Unhealthy | clear, 15 to 27C |
-| Tue 03 Nov | d+3 | 93.1 | 62.8 to 137.8 | 102.1 | 177 | Unhealthy | cloudy, 13 to 27C |
-| Wed 04 Nov | d+4 | 87.4 | 58.8 to 129.9 | 96.6 | 173 | Unhealthy | cloudy, 14 to 26C |
-| Thu 05 Nov | d+5 | 84.3 | 56.6 to 125.7 | 93.7 | 171 | Unhealthy | cloudy, 13 to 27C |
-| Fri 06 Nov | d+6 | 82.6 | 55.5 to 122.9 | 92.2 | 170 | Unhealthy | cloudy, 14 to 26C |
-| Sat 07 Nov | d+7 | 81.6 | 54.8 to 121.7 | 91.3 | 169 | Unhealthy | clear, 15 to 26C |
+| Mon 02 Nov | d+1 | 129.5 | 93.4 to 179.7 | 139.5 | 205 | Very Unhealthy | clear, 16 to 27C |
+| Tue 03 Nov | d+2 | 109.6 | 74.2 to 161.8 | 119.0 | 189 | Unhealthy | cloudy, 13 to 26C |
+| Wed 04 Nov | d+3 | 99.5 | 66.7 to 148.2 | 108.9 | 182 | Unhealthy | cloudy, 14 to 26C |
+| Thu 05 Nov | d+4 | 94.0 | 62.8 to 140.6 | 103.6 | 178 | Unhealthy | cloudy, 15 to 27C |
+| Fri 06 Nov | d+5 | 91.0 | 60.6 to 136.5 | 100.7 | 176 | Unhealthy | cloudy, 13 to 26C |
+| Sat 07 Nov | d+6 | 89.2 | 59.5 to 133.8 | 99.2 | 175 | Unhealthy | clear, 14 to 26C |
+| Sun 08 Nov | d+7 | 88.3 | 58.7 to 132.7 | 98.3 | 174 | Unhealthy | cloudy, 14 to 26C |
 
 Concentrations are daily means in micrograms per cubic metre. The range is an 80% interval measured from this zone's own past errors, not from theory. Past about day three the forecast is essentially the 14 day seasonal level, which is the model being honest rather than the model giving up.
 
@@ -28,25 +28,37 @@ Every forecast this log has published, graded once its day finished. Nothing her
 
 | Lead | Days scored | Typical miss | Mean miss | Bias | Inside 80% range | Category exact | Within one band |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| d+1 | 68 | 14% | 17% | -7% | 90% | 72% | 99% |
-| d+2 | 67 | 17% | 20% | -8% | 85% | 69% | 99% |
-| d+3 | 66 | 19% | 21% | -9% | 85% | 71% | 98% |
-| d+4 | 65 | 18% | 22% | -9% | 82% | 69% | 98% |
-| d+5 | 64 | 18% | 21% | -10% | 81% | 67% | 98% |
-| d+6 | 63 | 17% | 22% | -11% | 81% | 67% | 98% |
-| d+7 | 62 | 18% | 23% | -12% | 82% | 65% | 98% |
+| d+1 | 69 | 13% | 17% | -7% | 90% | 74% | 99% |
+| d+2 | 68 | 17% | 20% | -9% | 84% | 66% | 99% |
+| d+3 | 67 | 19% | 21% | -10% | 84% | 69% | 99% |
+| d+4 | 66 | 18% | 22% | -10% | 80% | 67% | 98% |
+| d+5 | 65 | 19% | 22% | -11% | 80% | 65% | 98% |
+| d+6 | 64 | 17% | 23% | -12% | 80% | 64% | 98% |
+| d+7 | 63 | 17% | 23% | -12% | 81% | 62% | 98% |
 
-Across all lead times the 80% range contained the truth **84%** of the time on **455** scored days. A range that says 80% should land near 80%: much less and it is overconfident, much more and it is wider than it needs to be. Bias is the direction of the miss, so a positive number means the forecast ran high.
+Across all lead times the 80% range contained the truth **83%** of the time on **462** scored days. A range that says 80% should land near 80%: much less and it is overconfident, much more and it is wider than it needs to be. Bias is the direction of the miss, so a positive number means the forecast ran high.
 
 ## Forecast log
 
 One block per night. Actual values appear as each day finishes, so the newest block is empty and the oldest is complete.
 
+### Issued 2026-11-02
+
+| Day | Lead | Forecast PM2.5 | 80% range | Forecast AQI | Actual PM2.5 | Actual AQI | Miss | In range |
+|---|---|---:|---|---:|---:|---:|---:|---|
+| Mon 02 Nov | d+1 | 129.5 | 93.4 to 179.7 | 205 | pending | pending | n/a | n/a |
+| Tue 03 Nov | d+2 | 109.6 | 74.2 to 161.8 | 189 | pending | pending | n/a | n/a |
+| Wed 04 Nov | d+3 | 99.5 | 66.7 to 148.2 | 182 | pending | pending | n/a | n/a |
+| Thu 05 Nov | d+4 | 94.0 | 62.8 to 140.6 | 178 | pending | pending | n/a | n/a |
+| Fri 06 Nov | d+5 | 91.0 | 60.6 to 136.5 | 176 | pending | pending | n/a | n/a |
+| Sat 07 Nov | d+6 | 89.2 | 59.5 to 133.8 | 175 | pending | pending | n/a | n/a |
+| Sun 08 Nov | d+7 | 88.3 | 58.7 to 132.7 | 174 | pending | pending | n/a | n/a |
+
 ### Issued 2026-11-01
 
 | Day | Lead | Forecast PM2.5 | 80% range | Forecast AQI | Actual PM2.5 | Actual AQI | Miss | In range |
 |---|---|---:|---|---:|---:|---:|---:|---|
-| Sun 01 Nov | d+1 | 125.7 | 90.6 to 174.3 | 201 | pending | pending | n/a | n/a |
+| Sun 01 Nov | d+1 | 125.7 | 90.6 to 174.3 | 201 | 172.8 | 248 | -27% | yes |
 | Mon 02 Nov | d+2 | 103.8 | 70.5 to 152.8 | 185 | pending | pending | n/a | n/a |
 | Tue 03 Nov | d+3 | 93.1 | 62.8 to 137.8 | 177 | pending | pending | n/a | n/a |
 | Wed 04 Nov | d+4 | 87.4 | 58.8 to 129.9 | 173 | pending | pending | n/a | n/a |
@@ -58,8 +70,8 @@ One block per night. Actual values appear as each day finishes, so the newest bl
 
 | Day | Lead | Forecast PM2.5 | 80% range | Forecast AQI | Actual PM2.5 | Actual AQI | Miss | In range |
 |---|---|---:|---|---:|---:|---:|---:|---|
-| Sat 31 Oct | d+1 | 98.8 | 71.4 to 136.6 | 181 | 175.5 | 251 | -44% | **no** |
-| Sun 01 Nov | d+2 | 87.4 | 59.8 to 127.7 | 173 | pending | pending | n/a | n/a |
+| Sat 31 Oct | d+1 | 98.8 | 71.4 to 136.6 | 181 | 175.5 | 250 | -44% | **no** |
+| Sun 01 Nov | d+2 | 87.4 | 59.8 to 127.7 | 173 | 172.8 | 248 | -49% | **no** |
 | Mon 02 Nov | d+3 | 81.5 | 55.5 to 119.8 | 169 | pending | pending | n/a | n/a |
 | Tue 03 Nov | d+4 | 78.4 | 53.1 to 115.5 | 167 | pending | pending | n/a | n/a |
 | Wed 04 Nov | d+5 | 76.6 | 51.8 to 113.3 | 166 | pending | pending | n/a | n/a |
@@ -70,9 +82,9 @@ One block per night. Actual values appear as each day finishes, so the newest bl
 
 | Day | Lead | Forecast PM2.5 | 80% range | Forecast AQI | Actual PM2.5 | Actual AQI | Miss | In range |
 |---|---|---:|---|---:|---:|---:|---:|---|
-| Fri 30 Oct | d+1 | 70.7 | 51.3 to 97.6 | 162 | 122.6 | 198 | -42% | **no** |
-| Sat 31 Oct | d+2 | 70.2 | 48.1 to 102.3 | 161 | 175.5 | 251 | -60% | **no** |
-| Sun 01 Nov | d+3 | 69.8 | 47.6 to 102.4 | 161 | pending | pending | n/a | n/a |
+| Fri 30 Oct | d+1 | 70.7 | 51.3 to 97.6 | 162 | 122.5 | 198 | -42% | **no** |
+| Sat 31 Oct | d+2 | 70.2 | 48.1 to 102.3 | 161 | 175.5 | 250 | -60% | **no** |
+| Sun 01 Nov | d+3 | 69.8 | 47.6 to 102.4 | 161 | 172.8 | 248 | -60% | **no** |
 | Mon 02 Nov | d+4 | 69.7 | 47.4 to 102.4 | 161 | pending | pending | n/a | n/a |
 | Tue 03 Nov | d+5 | 69.5 | 47.2 to 102.5 | 161 | pending | pending | n/a | n/a |
 | Wed 04 Nov | d+6 | 69.5 | 47.3 to 102.1 | 161 | pending | pending | n/a | n/a |
@@ -83,9 +95,9 @@ One block per night. Actual values appear as each day finishes, so the newest bl
 | Day | Lead | Forecast PM2.5 | 80% range | Forecast AQI | Actual PM2.5 | Actual AQI | Miss | In range |
 |---|---|---:|---|---:|---:|---:|---:|---|
 | Thu 29 Oct | d+1 | 67.4 | 48.8 to 93.0 | 159 | 71.7 | 162 | -6% | yes |
-| Fri 30 Oct | d+2 | 66.6 | 45.7 to 97.2 | 159 | 122.6 | 198 | -46% | **no** |
-| Sat 31 Oct | d+3 | 66.2 | 45.1 to 97.2 | 159 | 175.5 | 251 | -62% | **no** |
-| Sun 01 Nov | d+4 | 66.0 | 44.8 to 97.1 | 158 | pending | pending | n/a | n/a |
+| Fri 30 Oct | d+2 | 66.6 | 45.7 to 97.2 | 159 | 122.5 | 198 | -46% | **no** |
+| Sat 31 Oct | d+3 | 66.2 | 45.1 to 97.2 | 159 | 175.5 | 250 | -62% | **no** |
+| Sun 01 Nov | d+4 | 66.0 | 44.8 to 97.1 | 158 | 172.8 | 248 | -62% | **no** |
 | Mon 02 Nov | d+5 | 65.9 | 44.7 to 97.1 | 158 | pending | pending | n/a | n/a |
 | Tue 03 Nov | d+6 | 65.8 | 44.7 to 96.7 | 158 | pending | pending | n/a | n/a |
 | Wed 04 Nov | d+7 | 65.7 | 44.6 to 96.9 | 158 | pending | pending | n/a | n/a |
@@ -96,9 +108,9 @@ One block per night. Actual values appear as each day finishes, so the newest bl
 |---|---|---:|---|---:|---:|---:|---:|---|
 | Wed 28 Oct | d+1 | 73.6 | 53.3 to 101.7 | 164 | 68.7 | 160 | +7% | yes |
 | Thu 29 Oct | d+2 | 69.7 | 47.8 to 101.9 | 161 | 71.7 | 162 | -3% | yes |
-| Fri 30 Oct | d+3 | 67.6 | 46.1 to 99.3 | 159 | 122.6 | 198 | -45% | **no** |
-| Sat 31 Oct | d+4 | 66.5 | 45.1 to 97.9 | 159 | 175.5 | 251 | -62% | **no** |
-| Sun 01 Nov | d+5 | 65.8 | 44.6 to 97.1 | 158 | pending | pending | n/a | n/a |
+| Fri 30 Oct | d+3 | 67.6 | 46.1 to 99.3 | 159 | 122.5 | 198 | -45% | **no** |
+| Sat 31 Oct | d+4 | 66.5 | 45.1 to 97.9 | 159 | 175.5 | 250 | -62% | **no** |
+| Sun 01 Nov | d+5 | 65.8 | 44.6 to 97.1 | 158 | 172.8 | 248 | -62% | **no** |
 | Mon 02 Nov | d+6 | 65.4 | 44.5 to 96.3 | 158 | pending | pending | n/a | n/a |
 | Tue 03 Nov | d+7 | 65.2 | 44.2 to 96.2 | 158 | pending | pending | n/a | n/a |
 
@@ -109,9 +121,9 @@ One block per night. Actual values appear as each day finishes, so the newest bl
 | Tue 27 Oct | d+1 | 71.7 | 51.9 to 99.2 | 162 | 81.0 | 169 | -11% | yes |
 | Wed 28 Oct | d+2 | 67.9 | 46.5 to 99.2 | 160 | 68.7 | 160 | -1% | yes |
 | Thu 29 Oct | d+3 | 65.8 | 44.8 to 96.6 | 158 | 71.7 | 162 | -8% | yes |
-| Fri 30 Oct | d+4 | 64.6 | 43.9 to 95.2 | 157 | 122.6 | 198 | -47% | **no** |
-| Sat 31 Oct | d+5 | 64.0 | 43.3 to 94.5 | 157 | 175.5 | 251 | -64% | **no** |
-| Sun 01 Nov | d+6 | 63.6 | 43.2 to 93.6 | 157 | pending | pending | n/a | n/a |
+| Fri 30 Oct | d+4 | 64.6 | 43.9 to 95.2 | 157 | 122.5 | 198 | -47% | **no** |
+| Sat 31 Oct | d+5 | 64.0 | 43.3 to 94.5 | 157 | 175.5 | 250 | -64% | **no** |
+| Sun 01 Nov | d+6 | 63.6 | 43.2 to 93.6 | 157 | 172.8 | 248 | -63% | **no** |
 | Mon 02 Nov | d+7 | 63.4 | 43.0 to 93.5 | 157 | pending | pending | n/a | n/a |
 
 ### Issued 2026-10-26
@@ -122,9 +134,9 @@ One block per night. Actual values appear as each day finishes, so the newest bl
 | Tue 27 Oct | d+2 | 61.3 | 41.9 to 89.5 | 155 | 81.0 | 169 | -24% | yes |
 | Wed 28 Oct | d+3 | 61.2 | 41.7 to 90.0 | 155 | 68.7 | 160 | -11% | yes |
 | Thu 29 Oct | d+4 | 61.2 | 41.5 to 90.3 | 155 | 71.7 | 162 | -15% | yes |
-| Fri 30 Oct | d+5 | 61.2 | 41.5 to 90.4 | 155 | 122.6 | 198 | -50% | **no** |
-| Sat 31 Oct | d+6 | 61.2 | 41.6 to 90.1 | 155 | 175.5 | 251 | -65% | **no** |
-| Sun 01 Nov | d+7 | 61.2 | 41.5 to 90.3 | 155 | pending | pending | n/a | n/a |
+| Fri 30 Oct | d+5 | 61.2 | 41.5 to 90.4 | 155 | 122.5 | 198 | -50% | **no** |
+| Sat 31 Oct | d+6 | 61.2 | 41.6 to 90.1 | 155 | 175.5 | 250 | -65% | **no** |
+| Sun 01 Nov | d+7 | 61.2 | 41.5 to 90.3 | 155 | 172.8 | 248 | -65% | **no** |
 
 ### Issued 2026-10-25
 
@@ -135,8 +147,8 @@ One block per night. Actual values appear as each day finishes, so the newest bl
 | Tue 27 Oct | d+3 | 58.8 | 40.0 to 86.5 | 153 | 81.0 | 169 | -27% | yes |
 | Wed 28 Oct | d+4 | 59.7 | 40.5 to 88.1 | 154 | 68.7 | 160 | -13% | yes |
 | Thu 29 Oct | d+5 | 60.2 | 40.8 to 89.0 | 154 | 71.7 | 162 | -16% | yes |
-| Fri 30 Oct | d+6 | 60.5 | 41.1 to 89.1 | 155 | 122.6 | 198 | -51% | **no** |
-| Sat 31 Oct | d+7 | 60.7 | 41.1 to 89.6 | 155 | 175.5 | 251 | -65% | **no** |
+| Fri 30 Oct | d+6 | 60.5 | 41.1 to 89.1 | 155 | 122.5 | 198 | -51% | **no** |
+| Sat 31 Oct | d+7 | 60.7 | 41.1 to 89.6 | 155 | 175.5 | 250 | -65% | **no** |
 
 ### Issued 2026-10-24
 
@@ -148,21 +160,9 @@ One block per night. Actual values appear as each day finishes, so the newest bl
 | Tue 27 Oct | d+4 | 66.7 | 45.2 to 98.5 | 159 | 81.0 | 169 | -18% | yes |
 | Wed 28 Oct | d+5 | 65.0 | 44.0 to 96.2 | 158 | 68.7 | 160 | -5% | yes |
 | Thu 29 Oct | d+6 | 64.1 | 43.5 to 94.5 | 157 | 71.7 | 162 | -11% | yes |
-| Fri 30 Oct | d+7 | 63.5 | 43.0 to 93.9 | 157 | 122.6 | 198 | -48% | **no** |
+| Fri 30 Oct | d+7 | 63.5 | 43.0 to 93.9 | 157 | 122.5 | 198 | -48% | **no** |
 
-### Issued 2026-10-23
-
-| Day | Lead | Forecast PM2.5 | 80% range | Forecast AQI | Actual PM2.5 | Actual AQI | Miss | In range |
-|---|---|---:|---|---:|---:|---:|---:|---|
-| Fri 23 Oct | d+1 | 76.4 | 55.4 to 105.3 | 166 | 108.8 | 188 | -30% | **no** |
-| Sat 24 Oct | d+2 | 68.7 | 47.1 to 100.3 | 160 | 50.5 | 138 | +36% | yes |
-| Sun 25 Oct | d+3 | 64.7 | 44.1 to 95.0 | 157 | 61.5 | 155 | +5% | yes |
-| Mon 26 Oct | d+4 | 62.5 | 42.5 to 92.1 | 156 | 79.0 | 167 | -21% | yes |
-| Tue 27 Oct | d+5 | 61.3 | 41.5 to 90.5 | 155 | 81.0 | 169 | -24% | yes |
-| Wed 28 Oct | d+6 | 60.6 | 41.2 to 89.2 | 155 | 68.7 | 160 | -12% | yes |
-| Thu 29 Oct | d+7 | 60.2 | 40.8 to 88.8 | 154 | 71.7 | 162 | -16% | yes |
-
-_59 older forecasts are not shown. The full journal is in `journal/` and nothing is ever removed from it._
+_60 older forecasts are not shown. The full journal is in `journal/` and nothing is ever removed from it._
 
 ## What these numbers do and do not show
 
